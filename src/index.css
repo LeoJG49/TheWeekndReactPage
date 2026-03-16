@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Ramabhadra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dekko&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-bg: #0e0b0b;
+  --secondary-bg: #f2f2f2;
+  --primary-text-color: #f2f2f2;
+  --secondary-text-color: #0e0b0b;
+  --title-font-family: "Ramabhadra", sans-serif;
+  --standard-font-family: "Notable", sans-serif;
+  --info-font-family: 'Dekko', sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: var(--primary-bg);
+}
