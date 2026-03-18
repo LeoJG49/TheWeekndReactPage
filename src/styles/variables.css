@@ -1,0 +1,19 @@
+:root {
+  /*COLORS*/
+  --primary-bg: #0e0b0b;
+  --secondary-bg: #f2f2f2;
+
+  --primary-text-color: #f2f2f2;
+  --secondary-text-color: #0e0b0b;
+
+  /*Fonts*/
+  --title-font-family: "Ramabhadra", sans-serif;
+  --standard-font-family: "Notable", sans-serif;
+  --info-font-family: "Dekko", sans-serif;
+
+  /*Font sizes*/
+  --ultra-large-font-size: 40rem;
+  --large-font-size: 2rem;
+  --normal-font-size: 1.2rem;
+  --small-font-size: .085rem
+}
