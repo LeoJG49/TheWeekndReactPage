@@ -7,7 +7,7 @@ export default function FooterContent() {
     <div className='footer-container'>
       <div className="footer-main-content">
         <div className="footer-section">
-          <h4 className="footer-info">About</h4>
+          <h5 className="footer-info">About</h5>
           <nav className='footer-nav'>
             <a href="#"><span>Home</span></a>
             <a href="#"><span>Projects</span></a>
@@ -16,7 +16,7 @@ export default function FooterContent() {
           </nav>
         </div>
         <div className="footer-section">
-          <h4 className="footer-info">Education</h4>
+          <h5 className="footer-info">Education</h5>
           <nav className='footer-nav'>
             <a href="#"><span>News</span></a>
             <a href="#"><span>Learn</span></a>
