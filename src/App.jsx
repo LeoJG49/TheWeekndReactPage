@@ -12,6 +12,9 @@ import ScrollTrigger from "gsap/ScrollTrigger"
 
 gsap.registerPlugin(ScrollTrigger)
 
+//TODO: Hacer que funcione la animación horizontal de About.
+// Arreglar el bug que hace que no se pueda scrollear en la web con el ratón.
+
 function App() {
 
   useEffect(() => {
