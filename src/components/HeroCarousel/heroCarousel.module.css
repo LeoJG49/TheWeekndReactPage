@@ -20,8 +20,8 @@
 
 .innerContainer {
   display: flex;
-  gap: 1rem;
-  padding-right: 1rem;
+  gap: 4rem;
+  padding-right: 4rem;
 }
 
 .carousel {

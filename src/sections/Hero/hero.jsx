@@ -1,4 +1,4 @@
-import HeroCarousel from '../../components/HeroCarousel/heroCarousel'
+import HeroCarousel from '../../components/HeroCarousel/heroCarousel.jsx'
 import styles from './hero.module.css'
 import React from 'react'
 
