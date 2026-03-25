@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import { useRef } from 'react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
@@ -6,76 +6,83 @@ import styles from './horizontalContent.module.css'
 
 gsap.registerPlugin(useGSAP, ScrollTrigger)
 
-const IMAGES = [
-  'AfterHours.webp',
-  'HurryUpTomorrow.webp',
-  'DawnFM.webp',
-  'Starboy.webp',
+const CARDS = [
+  { image: 'AfterHours.webp',      posClass: styles.card1, endX: -200,  rotate: 45  },
+  { image: 'HurryUpTomorrow.webp', posClass: styles.card2, endX: -1000, rotate: -30 },
+  { image: 'DawnFM.webp',          posClass: styles.card3, endX: -2000, rotate: 45  },
+  { image: 'Starboy.webp',         posClass: styles.card4, endX: -1500, rotate: -30 },
 ]
 
-const CARD_POSITIONS = [
-  styles.card1,
-  styles.card2,
-  styles.card3,
-  styles.card4,
-]
+const SCROLL_DISTANCE = '+=900vh'
+const TEXT_TRAVEL     = '-350vw'
 
 export default function HorizontalContent() {
-  const wrapperRef = useRef();
+  const sectionRef = useRef(null)
+  const textRef    = useRef(null)
+  const cardsRef   = useRef([])
 
   useGSAP(
     () => {
-      // const section = wrapperRef.current
-      // if (!section) return
+      const section = sectionRef.current
+      const text    = textRef.current
+      if (!section || !text) return
 
-      gsap.to(wrapperRef.current, {
-        x: '-350vw',
+      // Scroll trigger compartido para que ambas animaciones
+      // estén pinned en el mismo punto y recorran la misma distancia
+      const sharedTrigger = {
+        trigger: section,   // elemento DOM real, no string de clase
+        start: 'top top',
+        end: SCROLL_DISTANCE,
+        scrub: 1,
+        pin: true,
+        anticipatePin: 1,
+        invalidateOnRefresh: true,
+      }
+
+      // Texto: se mueve más rápido (350vw)
+      gsap.to(text, {
+        x: TEXT_TRAVEL,
         ease: 'none',
-        scrollTrigger: {
-          trigger: styles.wrapperIntro,
-          start: 'top top',
-          end: '+=900vh',
-          scrub: 1,
-          pin: true,
-          markers: true,
-          anticipatePin: 1,
-          fastScrollEnd: true,
-          invalidateOnRefresh: true,
-        }
+        scrollTrigger: sharedTrigger,
       })
 
-      // const scroll = {
-      //   trigger: section,
-      //   start: 'top top',
-      //   end: '+=1000vh',
-      //   scrub: 1,
-      //   pin: true,
-      // }
+      // Cartas: cada una con su propia velocidad y rotación (parallax)
+      cardsRef.current.forEach((card, i) => {
+        if (!card) return
+        const { endX, rotate } = CARDS[i]
 
-      // const tl = gsap.timeline({ ScrollTrigger: scroll })
-
-      // tl.to(section, {x: '-780vw', ease: 'none', duration: 1}, 0)
-
-      // const cards = section.querySelectorAll(`.${styles.card}`)
-      // cards.forEach((card, i) => {
-      //   tl.to(
-      //     card,
-      //     {
-      //       x: (i - 1.5) * 40,
-      //       rotation: i % 2 === 0 ? 10 : -10,
-      //       ease: 'none',
-      //     }, 
-      //     0
-      //   )
-      // })
+        gsap.to(card, {
+          x: endX,
+          rotation: rotate,
+          ease: 'none',
+          scrollTrigger: sharedTrigger,
+        })
+      })
     },
-    { scope: wrapperRef }
+    { scope: sectionRef }
   )
 
   return (
-    <div ref={wrapperRef} className={styles.wrapperIntro}>
-      <h2 className={styles.gigantText}>Page Not Found</h2>
+    <section ref={sectionRef} className={styles.wrapperIntro}>
+      <h2 ref={textRef} className={styles.gigantText}>
+        The Weeknd
+      </h2>
 
-    </div>
+      {CARDS.map(({ image, posClass }, i) => (
+        <div
+          key={image}
+          ref={(el) => (cardsRef.current[i] = el)}
+          className={`${styles.card} ${posClass}`}
+        >
+          <img
+            src={`/src/assets/${image}`}
+            alt={image.replace('.webp', '')}
+            loading="lazy"
+            draggable={false}
+            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          />
+        </div>
+      ))}
+    </section>
   )
 }
