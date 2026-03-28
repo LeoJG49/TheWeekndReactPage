@@ -20,8 +20,8 @@ function App() {
       <main>
         <Hero />
         <About />
-        <Tour />
         <Discography />
+        <Tour />
       </main>
       <Footer />
     </>
