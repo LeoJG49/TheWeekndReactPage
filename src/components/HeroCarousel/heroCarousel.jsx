@@ -2,7 +2,7 @@ import React, { useRef, useCallback } from 'react'
 import styles from './heroCarousel.module.css'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
-import { heroCarouselItems } from '../../data/albumsData'
+import { heroCarouselItems } from '../../data/albumsData.js'
 
 gsap.registerPlugin(useGSAP)
 
