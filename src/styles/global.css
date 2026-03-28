@@ -8,6 +8,12 @@ html,
 body {
   width: 100%;
   height: 100%;
+}
+
+/*NEVER PUT OVERFLOW-X: HIDDEN ON THE HTML,BODY {}, THIS MAKES THE LENIS
+SCROLL FALID TO EXECUTE. ALWAYS ADD THE OVERFLOW HIDDEN IN THE HTML {}
+*/
+html {
   overflow-x: hidden;
 }
 
