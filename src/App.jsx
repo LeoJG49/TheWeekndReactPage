@@ -1,15 +1,12 @@
 'use client'
 import { useLenis } from "./hooks/useLenis.js"
-import Header from "./components/Header/header"
-import Hero from "./sections/Hero/hero.jsx"
-import About from "./sections/About/about.jsx"
-import Discography from "./sections/Discography/discography.jsx"
-import Tour from "./sections/Tour/tour.jsx"
-import Footer from "./components/Footer/footer.jsx"
+import Header from "./components/Header/Header.jsx"
+import Hero from "./sections/Hero/Hero.jsx"
+import About from "./sections/About/About.jsx"
+import Discography from "./sections/Discography/Discography.jsx"
+import Tour from "./sections/Tour/Tour.jsx"
+import Footer from "./components/Footer/Footer.jsx"
 
-
-//TODO: Hacer que funcione la animación horizontal de About.
-// Arreglar el bug que hace que no se pueda scrollear en la web con el ratón.
 
 function App() {
   useLenis()
