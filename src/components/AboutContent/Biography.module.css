@@ -1,0 +1,9 @@
+.biographyText {
+	width: 90%;
+	height: 100svh;
+	font-size: var(--large-font-size);
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
