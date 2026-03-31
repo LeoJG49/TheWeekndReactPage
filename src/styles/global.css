@@ -11,7 +11,7 @@ body {
 }
 
 /*NEVER PUT OVERFLOW-X: HIDDEN ON THE HTML,BODY {}, THIS MAKES THE LENIS
-SCROLL FALID TO EXECUTE. ALWAYS ADD THE OVERFLOW HIDDEN IN THE HTML {}
+SCROLL FAILED TO EXECUTE. ALWAYS ADD THE OVERFLOW HIDDEN IN THE HTML {}
 */
 html {
   overflow-x: hidden;
@@ -32,6 +32,10 @@ button {
   border: none;
   background-color: none;
   cursor: pointer;
+}
+
+p {
+  font-size: var(--normal-font-size);
 }
 
 a {
