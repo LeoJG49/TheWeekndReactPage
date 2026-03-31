@@ -1,31 +1,21 @@
-import { useEffect } from 'react'
-import Lenis from 'lenis'
-import gsap from 'gsap'
-import ScrollTrigger from 'gsap/ScrollTrigger'
-
-gsap.registerPlugin(ScrollTrigger)
+import { useEffect } from 'react';
+import Lenis from 'lenis';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 export function useLenis() {
   useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      smoothWheel: true,
-    })
+    const lenis = new Lenis();
 
-    // Clave: sincronizar Lenis con el ticker de GSAP
-    // Así ScrollTrigger recibe las posiciones correctas de scroll
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000)
-    })
+    lenis.on('scroll', ScrollTrigger.update);
 
-    // Evita que GSAP use requestAnimationFrame propio, lo delega a Lenis
-    gsap.ticker.lagSmoothing(0)
+    const rafCallback = (time) => lenis.raf(time * 1000);
+    gsap.ticker.add(rafCallback);
+    gsap.ticker.lagSmoothing(0);
 
     return () => {
-      lenis.destroy()
-      // Limpia el ticker al desmontar para no acumular listeners
-      gsap.ticker.remove((time) => lenis.raf(time * 1000))
-    }
-  }, [])
+      lenis.destroy();
+      gsap.ticker.remove(rafCallback);
+    };
+  }, []);
 }
