@@ -9,19 +9,19 @@ export default function FooterContent() {
         <div className="footer-section">
           <h5 className="footer-info">ABOUT</h5>
           <nav className='footer-nav'>
-            <a href="#"><span>Home</span></a>
-            <a href="#"><span>Projects</span></a>
-            <a href="#"><span>Our Mission</span></a>
-            <a href="#"><span>Contact Us</span></a>
+            <a href="#" className='hover-underline'><span>Home</span></a>
+            <a href="https://portfolioleodev2.netlify.app/" target='_blank' rel='noopener noreferrer' className='hover-underline'><span>Portfolio</span></a>
+            <a href="mailto:leoneljovel49@gmail.com" target='_blank' rel='noopener noreferrer' className='hover-underline'><span>Contact Me</span></a>
+            <a href="mailto:leoneljovel49@gmail.com" target='_blank' rel='noopener noreferrer' className='hover-underline'><span>Email</span></a>
           </nav>
         </div>
         <div className="footer-section">
-          <h5 className="footer-info">EDUCATION</h5>
+          <h5 className="footer-info">SOCIAL MEDIA</h5>
           <nav className='footer-nav'>
-            <a href="#"><span>News</span></a>
-            <a href="#"><span>Learn</span></a>
-            <a href="#"><span>Certification</span></a>
-            <a href="#"><span>Publications</span></a>
+            <a href="https://www.linkedin.com/in/leonel-jovel-942900272/" target='_blank' rel='noopener noreferrer' className='hover-underline'><span>Linkedin</span></a>
+            <a href="https://github.com/LeoJG49" target='_blank' rel='noopener noreferrer' className='hover-underline'><span>Github</span></a>
+            <a href="https://www.instagram.com/leonel_jg49/" target='_blank' rel='noopener noreferrer' className='hover-underline'><span>Instagram</span></a>
+            <a href="https://x.com/Leo04070259" target='_blank' rel='noopener noreferrer' className='hover-underline'><span>X</span></a>
           </nav>
         </div>
       </div>

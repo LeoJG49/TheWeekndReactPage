@@ -22,7 +22,7 @@ function CarouselRow({ rowRef, items }) {
             ? { target: '_blank', rel: 'noopener noreferrer' }
             : {})}
         >
-          <img src={item.src} alt={item.alt} className={styles.carousel} />
+          <img src={item.src} alt={item.alt} className={styles.carousel} loading='lazy' />
         </a>
       ))}
     </div>
