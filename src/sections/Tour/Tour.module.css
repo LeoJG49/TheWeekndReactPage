@@ -1,4 +1,7 @@
 .tour {
   width: 100%;
-  height: 120svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
 }
