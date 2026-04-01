@@ -13,7 +13,8 @@
 
   /*Font sizes*/
   --ultra-large-font-size: 40rem;
-  --large-font-size: 2.5rem;
+  --title-font-size: 5rem;
+  --large-font-size: 2.2rem;
   --normal-font-size: 1.2rem;
   --small-font-size: .85rem
 }

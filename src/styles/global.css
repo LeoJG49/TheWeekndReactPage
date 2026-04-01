@@ -51,9 +51,23 @@ span {
   display: inline-block;
 }
 
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--primary-bg);
+  opacity: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-bg);
+  border-radius: 5px;
+}
+
 .hover-underline {
   position: relative;
-  padding-bottom: 0.22rem;
+  padding-bottom: 0.1rem;
 }
 
 .hover-underline::after {
