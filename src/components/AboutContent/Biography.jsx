@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Biography.module.css'
 import { useRef } from 'react'
-import { useInfoTextAnimation } from '../../animations/useInfoTextAnimation'
+import { useInfoTextAnimation } from '../../hooks/useInfoTextAnimation'
 
 export default function Biography() {
   const textRef = useRef(null);

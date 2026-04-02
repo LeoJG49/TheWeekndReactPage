@@ -6,7 +6,7 @@ import HorizontalContent from '../../components/AboutContent/HorizontalTitle.jsx
 export default function About() {
   return (
     <section className={styles.about}>
-      {/* <HorizontalContent /> */}
+      <HorizontalContent />
       <Biography />
     </section>
   )
