@@ -1,11 +1,11 @@
 import React from 'react'
 import DiscographyCards from '../../components/DiscographyItems/DiscographyCards.jsx'
-import DiscographyTitle from '../../components/DiscographyItems/DiscographyTitle.jsx'
+import AnimatedText from '../../components/DiscographyItems/DiscographyTitle.jsx'
 
 export default function Discography() {
   return (
     <>
-      <DiscographyTitle />
+      <AnimatedText>The Weeknd's Discography</AnimatedText>
       <DiscographyCards />
     </>
   )

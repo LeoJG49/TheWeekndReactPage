@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 import { CARDS_DATA } from '../../data/discographyData.js'
-import { useDiscographyCards } from '../../animations/useDiscographyCards.js'
+import { useDiscographyCards } from '../../hooks/useDiscographyCards.js'
 import styles from './DiscographyCards.module.css'
 
 export default function DiscographyCards() {

@@ -25,6 +25,10 @@
   will-change: transform;
 }
 
+.cardText {
+  font-size: var(--normal-font-size);
+}
+
 .col {
   flex: 1;
   height: 100%;
