@@ -12,7 +12,7 @@ export default function FooterContent() {
             <a href="#" className='hover-underline'><span>Home</span></a>
             <a href="https://portfolioleodev2.netlify.app/" target='_blank' rel='noopener noreferrer' className='hover-underline'><span>Portfolio</span></a>
             <a href="mailto:leoneljovel49@gmail.com" target='_blank' rel='noopener noreferrer' className='hover-underline'><span>Contact Me</span></a>
-            <a href="mailto:leoneljovel49@gmail.com" target='_blank' rel='noopener noreferrer' className='hover-underline'><span>Email</span></a>
+            <a href="mailto:leoneljovel49@gmail.com" target='_blank' rel='noopener noreferrer' className='hover-underline'><span>Email: leoneljovel49@gmail.com</span></a>
           </nav>
         </div>
         <div className="footer-section">
