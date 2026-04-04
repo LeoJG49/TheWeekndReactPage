@@ -1,3 +1,4 @@
+'use client'
 import React, { useRef, useCallback } from 'react'
 import styles from './HeroCarousel.module.css'
 import gsap from 'gsap'
