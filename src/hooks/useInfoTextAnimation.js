@@ -28,6 +28,8 @@ export function useInfoTextAnimation(ref) {
         charsClass: "char",
         autoSplit: true,
         onSplit(self) {
+          ref.current.removeAttribute("aria-label")
+
           scrollTriggerInstance = gsap.from(self.chars, {
             scrollTrigger: {
               trigger: ref.current,
