@@ -29,7 +29,7 @@ import styles from './DiscographyTitle.module.css'
  */
 
 export default function AnimatedText({
-  as: Tag = "h6",
+  as: Tag = "h2",
   className = "",
   children,
   y,
