@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import FooterContent from './FooterContent.jsx'
 import styles from './Footer.module.css'
