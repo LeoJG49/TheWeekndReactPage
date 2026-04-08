@@ -4,9 +4,9 @@ import styles from './HorizontalTitle.module.css'
 
 const CARDS_CONFIG = [
   { endTranslateX: -200, rotate: 45  },
+  { endTranslateX: -600, rotate: -30 },
+  { endTranslateX: -800, rotate: 45  },
   { endTranslateX: -1000, rotate: -30 },
-  { endTranslateX: -2000, rotate: 45  },
-  { endTranslateX: -1500, rotate: -30 },
 ]
 
 const CARDS_IMAGES = [

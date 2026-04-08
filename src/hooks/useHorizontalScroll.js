@@ -43,7 +43,7 @@ export function useHorizontalScroll(wrapperRef, cardsRef, cardsConfig) {
           gsap.to(card, {
             x: `${config.endTranslateX * self.progress}px`,
             rotate: `${config.rotate * self.progress * 2}`,
-            duration: 0.5,
+            duration: 1,
             ease: 'power3.out',
           });
         },
