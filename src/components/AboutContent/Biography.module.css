@@ -1,7 +1,7 @@
 .biographyText {
 	width: 90%;
 	height: 100svh;
-	font-size: var(--large-font-size);
+	font-size: clamp(1rem, 2.5vw, 2.2rem);
 	position: relative;
 	display: flex;
 	justify-content: center;
