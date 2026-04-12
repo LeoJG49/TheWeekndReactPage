@@ -26,7 +26,7 @@
 }
 
 .cardText {
-  font-size: var(--normal-font-size);
+  font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
 .col {
@@ -50,7 +50,7 @@
   background-color: yellowgreen
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   .card {
     width: calc(100% - 4rem);
     height: 75%;
@@ -59,7 +59,9 @@
   }
 
   .card img {
-    object-fit: contain;
+    width: 75%;
+    border-radius: 1rem;
+    object-fit: cover;
   }
 
   .col {
